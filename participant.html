@@ -1,0 +1,20 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pari</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="participant-name"></h1>
+    <p id="cote"></p>
+    <form id="pari-form">
+      <input type="text" id="pseudo" placeholder="Ton pseudo" required>
+      <input type="number" id="note" placeholder="Note sur 20" min="0" max="20" required>
+      <button type="submit">Parier</button>
+    </form>
+  </div>
+  <script src="participant.js" type="module"></script>
+</body>
+</html>
