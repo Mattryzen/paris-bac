@@ -1,22 +1,36 @@
 body {
-    font-family: sans-serif;
-    background: linear-gradient(to right, #f0fefe, #c8f8ff);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    margin-top: 100px;
-  }
-  input[type="text"], input[type="number"] {
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    width: 300px;
-    margin: 10px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-  }
-  #results div {
-    margin-top: 5px;
-    cursor: pointer;
-  }
+  font-family: sans-serif;
+  background: linear-gradient(to right, #f0fefe, #c8f8ff);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin-top: 100px;
+}
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+#results div {
+  margin-top: 5px;
+  cursor: pointer;
+}
+#liste-paris {
+  margin-top: 40px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#liste-paris p {
+  margin: 5px 0;
+}

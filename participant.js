@@ -19,6 +19,7 @@ document.getElementById("participant-name").textContent = id;
 
 const form = document.getElementById("pari-form");
 const coteEl = document.getElementById("cote");
+const listeParis = document.getElementById("liste-paris");
 
 function calculerCote(paris) {
   const notes = Object.values(paris);
@@ -31,6 +32,13 @@ const parisRef = ref(db, `paris/${id}`);
 onValue(parisRef, snapshot => {
   const data = snapshot.val() || {};
   coteEl.textContent = calculerCote(data);
+
+  listeParis.innerHTML = "<h3>Paris enregistrés :</h3>";
+  for (const [pseudo, note] of Object.entries(data)) {
+    const p = document.createElement("p");
+    p.textContent = `${pseudo} : ${note}/20`;
+    listeParis.appendChild(p);
+  }
 });
 
 form.addEventListener("submit", async e => {
