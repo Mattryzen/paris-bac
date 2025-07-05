@@ -16,7 +16,7 @@ const db = getDatabase(app);
 const searchInput = document.getElementById("search");
 const results = document.getElementById("results");
 
-const participants = ["Alice", "Bastien", "Camille", "David"];
+const participants = ["Matteo", "Malone", "Gabin", "Lucas", "Corentin", "Nahil", "Hugo.Lefevre", "Charly", "Evan", "Hugo.Legnier", "Iann", "Loic"];
 
 searchInput.addEventListener("input", () => {
   const val = searchInput.value.toLowerCase();
