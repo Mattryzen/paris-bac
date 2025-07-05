@@ -2,13 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getDatabase, ref, set, get, onValue, child } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "TA_CLE",
-  authDomain: "TON_PROJET.firebaseapp.com",
-  projectId: "TON_PROJET",
-  storageBucket: "TON_PROJET.appspot.com",
-  messagingSenderId: "...",
-  appId: "...",
-  databaseURL: "https://TON_PROJET.firebaseio.com"
+  apiKey: "AIzaSyBC3KNykSGTEBzvzJ5FEMV-PlwaPKkXgUk",
+  authDomain: "pari-bac.firebaseapp.com",
+  projectId: "pari-bac",
+  storageBucket: "pari-bac.firebasestorage.app",
+  messagingSenderId: "564303747617",
+  appId: "1:564303747617:web:04abacb4435c9bb826e160",
+  databaseURL: "https://pari-bac.firebaseio.com"
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
