@@ -12,15 +12,19 @@ body {
 }
 .container {
   margin-top: 20px;
+  width: 90%; /* Make container responsive */
+  max-width: 500px; /* Limit container width on larger screens */
 }
 input[type="text"], input[type="number"] {
   padding: 15px;
   border-radius: 20px;
   border: 1px solid #ccc;
-  width: 400px;
-  margin: 10px;
+  width: calc(100% - 30px); /* Adjust width to account for padding */
+  max-width: 400px; /* Limit input width on larger screens */
+  margin: 10px 0; /* Adjust margin for better spacing */
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   font-size: 1.1em;
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 #results div {
   margin-top: 5px;
@@ -30,13 +34,15 @@ input[type="text"], input[type="number"] {
 #liste-paris {
   margin-top: 40px;
   text-align: left;
-  max-width: 400px;
+  width: 90%; /* Make list responsive */
+  max-width: 400px; /* Limit list width on larger screens */
   margin-left: auto;
   margin-right: auto;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 #liste-paris p {
   margin: 5px 0;
@@ -44,4 +50,18 @@ input[type="text"], input[type="number"] {
 }
 h1 {
   font-size: 2em;
+}
+
+/* Media query for even smaller screens if needed */
+@media (max-width: 480px) {
+  input[type="text"], input[type="number"] {
+    font-size: 1em; /* Slightly smaller font for very small screens */
+    padding: 12px;
+  }
+  #liste-paris p {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
 }
