@@ -39,6 +39,12 @@ form.addEventListener("submit", async e => {
   const note = parseFloat(document.getElementById("note").value);
   if (!pseudo || isNaN(note)) return alert("Champs invalides.");
 
+  const regexPseudo = /^[a-zA-Z0-9]+$/;
+  if (!regexPseudo.test(pseudo)) {
+    alert("Le pseudo ne doit contenir que des lettres et des chiffres (sans espaces ni symboles).");
+    return;
+  }
+
   const userRef = ref(db, `paris/${id}/${pseudo}`);
   const snapshot = await get(userRef);
   if (snapshot.exists()) {
