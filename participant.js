@@ -8,7 +8,7 @@ const firebaseConfig = {
   storageBucket: "pari-bac.firebasestorage.app",
   messagingSenderId: "564303747617",
   appId: "1:564303747617:web:04abacb4435c9bb826e160",
-  databaseURL: "https://pari-bac.firebaseio.com"
+  databaseURL: "https://pari-bac-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
