@@ -15,8 +15,9 @@ const db = getDatabase(app);
 
 const searchInput = document.getElementById("search");
 const results = document.getElementById("results");
+const leaderboardList = document.getElementById("leaderboard-list");
 
-const participants = ["Matteo", "Malone", "Gabin", "Lucas", "Corentin", "Nahil", "Hugo.Lefevre", "Charly", "Evan", "Hugo.Legnier", "Iann", "Loic"];
+const participants = ["Alice", "Bastien", "Camille", "David"];
 
 searchInput.addEventListener("input", () => {
   const val = searchInput.value.toLowerCase();
@@ -28,3 +29,29 @@ searchInput.addEventListener("input", () => {
     results.appendChild(div);
   });
 });
+
+async function chargerLeaderboard() {
+  const dataRef = ref(db, "paris");
+  const snapshot = await get(dataRef);
+  if (!snapshot.exists()) return;
+  const data = snapshot.val();
+  const classement = [];
+
+  for (const participant in data) {
+    const notes = Object.values(data[participant]);
+    if (notes.length === 0) continue;
+    const moyenne = notes.reduce((a, b) => a + b, 0) / notes.length;
+    classement.push({ nom: participant, moyenne });
+  }
+
+  classement.sort((a, b) => b.moyenne - a.moyenne);
+
+  leaderboardList.innerHTML = "";
+  classement.forEach((e, i) => {
+    const li = document.createElement("li");
+    li.textContent = `${i + 1}. ${e.nom} — Moyenne prédite : ${e.moyenne.toFixed(2)}/20`;
+    leaderboardList.appendChild(li);
+  });
+}
+
+chargerLeaderboard();
