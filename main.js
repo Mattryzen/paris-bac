@@ -17,7 +17,7 @@ const searchInput = document.getElementById("search");
 const results = document.getElementById("results");
 const leaderboardList = document.getElementById("leaderboard-list");
 
-const participants = ["Charly", "Corentin", "Evan", "Gabin", "Hugo.Lefevre", "Hugo.Leignier", "Iann", "Loic", "Lucas", "Malone", "Matteo", "Nahil"];
+const participants = ["Aaron", "Charly", "Corentin", "Evan", "Gabin", "HugoLefevre", "HugoLeignier", "Iann", "Loic", "Lucas", "Malone", "Matteo", "Nahil", "Yanis"];
 
 searchInput.addEventListener("input", () => {
   const val = searchInput.value.toLowerCase();
