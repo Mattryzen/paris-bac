@@ -8,11 +8,11 @@
 <body>
   <div class="container">
     <h1 id="participant-name"></h1>
-    <p id="cote"></p>
+    <p id="cote" class="cote-texte"></p>
     <form id="pari-form">
       <input type="text" id="pseudo" placeholder="Ton pseudo" required>
       <input type="number" id="note" placeholder="Note sur 20" min="0" max="20" required>
-      <button type="submit">Parier</button>
+      <button type="submit" class="btn-parier">Parier</button>
     </form>
     <div id="liste-paris"></div>
     <canvas id="chart-notes" width="400" height="200" style="margin-top: 40px;"></canvas>

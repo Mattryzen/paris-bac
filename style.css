@@ -12,19 +12,41 @@ body {
 }
 .container {
   margin-top: 20px;
-  width: 90%; /* Make container responsive */
-  max-width: 500px; /* Limit container width on larger screens */
+  width: 90%;
+  max-width: 500px;
 }
 input[type="text"], input[type="number"] {
   padding: 15px;
   border-radius: 20px;
   border: 1px solid #ccc;
-  width: calc(100% - 30px); /* Adjust width to account for padding */
-  max-width: 400px; /* Limit input width on larger screens */
-  margin: 10px 0; /* Adjust margin for better spacing */
+  width: calc(100% - 30px);
+  max-width: 400px;
+  margin: 10px 0;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   font-size: 1.1em;
-  box-sizing: border-box; /* Include padding in the width calculation */
+  box-sizing: border-box;
+}
+button.btn-parier {
+  padding: 12px 24px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ff4b5c;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+button.btn-parier:hover {
+  background-color: #e63946;
+}
+.cote-texte {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 #results div {
   margin-top: 5px;
@@ -34,15 +56,15 @@ input[type="text"], input[type="number"] {
 #liste-paris {
   margin-top: 40px;
   text-align: left;
-  width: 90%; /* Make list responsive */
-  max-width: 400px; /* Limit list width on larger screens */
+  width: 90%;
+  max-width: 400px;
   margin-left: auto;
   margin-right: auto;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  box-sizing: border-box; /* Include padding in the width calculation */
+  box-sizing: border-box;
 }
 #liste-paris p {
   margin: 5px 0;
@@ -51,11 +73,9 @@ input[type="text"], input[type="number"] {
 h1 {
   font-size: 2em;
 }
-
-/* Media query for even smaller screens if needed */
 @media (max-width: 480px) {
   input[type="text"], input[type="number"] {
-    font-size: 1em; /* Slightly smaller font for very small screens */
+    font-size: 1em;
     padding: 12px;
   }
   #liste-paris p {
